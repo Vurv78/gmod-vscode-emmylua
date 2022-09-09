@@ -1,0 +1,38 @@
+{
+	"name": "gmod-vscode-emmylua",
+	"displayName": "Gmod Emmylua",
+	"description": "Gmod bindings for sumneko's lua language server",
+	"version": "0.1.0",
+	"publisher": "Vurv78",
+	"repository": "https://github.com/Vurv78/gmod-vscode-emmylua",
+	"engines": {
+		"vscode": "^1.61.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:lua"
+	],
+	"main": "./out/extension.js",
+	"contributes": {},
+	"scripts": {
+		"vscode:prepublish": "npm run build",
+		"build": "swc src -d out --config-file .swcrc"
+	},
+	"devDependencies": {
+		"@swc/cli": "^0.1.57",
+		"@swc/core": "^1.2.222",
+		"@types/node": "^18.6.3",
+		"@types/vscode": "^1.61.0"
+	},
+	"extensionDependencies": [
+		"sumneko.lua"
+	],
+	"dependencies": {
+		"axios": "^0.27.2",
+		"bson": "^4.7.0",
+		"cheerio": "^1.0.0-rc.12",
+		"regenerator-runtime": "^0.13.9"
+	}
+}
